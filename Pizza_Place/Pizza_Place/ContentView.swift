@@ -37,18 +37,24 @@ struct ContentView: View {
                 Text(9.99, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
             }
             
-            HStack(alignment: .top, spacing: 15) {
-                Image("0_sm")
-                VStack(alignment: .leading) {
-                    Text("Margherita")
-                    Text("Description:")
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                    Text("Less spicy, extra mushroom")
-                        .font(.footnote)
-                        .foregroundStyle(.gray)
+            ScrollView {
+                ForEach(1...10, id: \.self) { item in
+                    HStack(alignment: .center, spacing: 15) {
+                        Image(systemName: "\(item).circle.fill")
+                        Image("0_sm")
+                        VStack(alignment: .leading) {
+                            Text("Margherita")
+                            Text("Description:")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                            Text("Less spicy, extra mushroom")
+                                .font(.footnote)
+                                .foregroundStyle(.gray)
+                        }
+                    }
                 }
             }
+
             Spacer()
         }
         .padding()
