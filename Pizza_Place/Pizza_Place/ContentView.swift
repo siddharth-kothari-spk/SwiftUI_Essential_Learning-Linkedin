@@ -31,7 +31,7 @@ struct ContentView: View {
             HStack(alignment: .firstTextBaseline) {
                 Text("Your order value:")
                 Spacer()
-                Text(9.99, format: .currency(code: "INR"))
+                Text(9.99, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
             }
             
             HStack(alignment: .top, spacing: 15) {
