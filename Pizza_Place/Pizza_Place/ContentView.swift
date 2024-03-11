@@ -31,12 +31,20 @@ struct ContentView: View {
             HStack(alignment: .firstTextBaseline) {
                 Text("Your order value:")
                 Spacer()
-                Text("$ 9.99")
+                Text(9.99, format: .currency(code: "INR"))
             }
             
             HStack(alignment: .top, spacing: 15) {
                 Image("0_sm")
-                Text("Margherita")
+                VStack(alignment: .leading) {
+                    Text("Margherita")
+                    Text("Description:")
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                    Text("Less spicy, extra mushroom")
+                        .font(.footnote)
+                        .foregroundStyle(.gray)
+                }
             }
             Spacer()
         }
