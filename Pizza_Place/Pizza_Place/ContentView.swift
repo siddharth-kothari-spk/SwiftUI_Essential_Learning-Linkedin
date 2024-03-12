@@ -21,15 +21,21 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .foregroundStyle(.white)
             }
-            
+            Label("Cart", systemImage: "cart")
             Text("Order a Pizza!!!!!")
                 .font(.title)
                 .fontWeight(.heavy)
                 .foregroundStyle(.red)
             
-            Image(systemName: orders.isEmpty ? "cart" : "cart.circle.fill")
-                .resizable()
-                .frame(width: 50, height: 50)
+            Label(
+                title: { Text(99.99, format: .currency(code: "INR")) },
+                icon: {
+                    Image(systemName: orders.isEmpty ? "cart" : "cart.circle.fill")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                }
+            )
+            
             
             HStack(alignment: .firstTextBaseline) {
                 Text("Your order value:")
