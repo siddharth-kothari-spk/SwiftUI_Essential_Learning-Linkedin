@@ -27,6 +27,7 @@ struct MenuViewItem: View {
                 Text("Less spicy, extra mushroom")
                     .font(.footnote)
                     .foregroundStyle(.gray)
+                RatingsView(rating: (1...6).randomElement()!)
             }
         }
     }
