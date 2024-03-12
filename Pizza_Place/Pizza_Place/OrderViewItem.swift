@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct OrderViewItem: View {
-    var item: Int = 2
+    var order: Int
      var body: some View {
          HStack(alignment: .firstTextBaseline) {
-             Text("Your order \(item) value:")
+             Text("Your order \(order) value:")
              Spacer()
              Text(9.99, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
          }
@@ -20,5 +20,5 @@ struct OrderViewItem: View {
 }
 
 #Preview {
-    OrderViewItem()
+    OrderViewItem(order: 2)
 }

@@ -18,8 +18,8 @@ struct OrderView: View {
             }
         )
         
-        ForEach(1...5, id: \.self) { item in
-            OrderViewItem()
+        ForEach(1...5, id: \.self) { order in
+            OrderViewItem(order: order)
         }
 
     }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MenuViewItem: View {
-    var item: Int = 3
+    var item: Int
     var body: some View {
         HStack(alignment: .center, spacing: 15) {
             Image(systemName: "\(item).circle.fill")
@@ -33,5 +33,5 @@ struct MenuViewItem: View {
 }
 
 #Preview {
-    MenuViewItem()
+    MenuViewItem(item: 3)
 }
