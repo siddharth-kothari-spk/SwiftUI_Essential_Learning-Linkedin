@@ -21,21 +21,13 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .foregroundStyle(.white)
             }
-            Label("Cart", systemImage: "cart")
+            Label("Cart", systemImage: orders.isEmpty ? "cart" : "cart.circle.fill")
             Text("Order a Pizza!!!!!")
                 .font(.title)
                 .fontWeight(.heavy)
                 .foregroundStyle(.red)
             
-            Label(
-                title: { Text(99.99, format: .currency(code: "INR")) },
-                icon: {
-                    Image(systemName: orders.isEmpty ? "cart" : "cart.circle.fill")
-                        .resizable()
-                        .frame(width: 50, height: 50)
-                }
-            )
-            
+           OrderView()
             
             HStack(alignment: .firstTextBaseline) {
                 Text("Your order value:")
@@ -43,29 +35,7 @@ struct ContentView: View {
                 Text(9.99, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
             }
             
-            ScrollView {
-                ForEach(1...10, id: \.self) { item in
-                    HStack(alignment: .center, spacing: 15) {
-                        Image(systemName: "\(item).circle.fill")
-                        if let image = UIImage(named: "\(item)_sm") {
-                            Image(uiImage: image)
-                        }
-                        else {
-                            Image("surfboard_lg")
-                        }
-                        
-                        VStack(alignment: .leading) {
-                            Text("Margherita")
-                            Text("Description:")
-                                .font(.subheadline)
-                                .fontWeight(.semibold)
-                            Text("Less spicy, extra mushroom")
-                                .font(.footnote)
-                                .foregroundStyle(.gray)
-                        }
-                    }
-                }
-            }
+            MenuView()
 
             Spacer()
         }
