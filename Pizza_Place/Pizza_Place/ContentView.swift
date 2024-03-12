@@ -41,7 +41,13 @@ struct ContentView: View {
                 ForEach(1...10, id: \.self) { item in
                     HStack(alignment: .center, spacing: 15) {
                         Image(systemName: "\(item).circle.fill")
-                        Image("0_sm")
+                        if let image = UIImage(named: "\(item)_sm") {
+                            Image(uiImage: image)
+                        }
+                        else {
+                            Image("surfboard_lg")
+                        }
+                        
                         VStack(alignment: .leading) {
                             Text("Margherita")
                             Text("Description:")
