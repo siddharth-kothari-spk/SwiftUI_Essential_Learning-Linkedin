@@ -17,6 +17,12 @@ struct OrderView: View {
                     .frame(width: 50, height: 50)
             }
         )
+        
+        HStack(alignment: .firstTextBaseline) {
+            Text("Your order value:")
+            Spacer()
+            Text(9.99, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+        }
     }
 }
 
