@@ -18,6 +18,8 @@
 		B11A4ECF2BA08C60006CFE27 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A4ECE2BA08C60006CFE27 /* OrderView.swift */; };
 		B11A4ED12BA08ED0006CFE27 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A4ED02BA08ED0006CFE27 /* HeaderView.swift */; };
 		B11A4ED32BA09039006CFE27 /* PlaceOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A4ED22BA09039006CFE27 /* PlaceOrderView.swift */; };
+		B11A4ED52BA0924B006CFE27 /* OrderViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A4ED42BA0924B006CFE27 /* OrderViewItem.swift */; };
+		B11A4ED72BA092BC006CFE27 /* MenuViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A4ED62BA092BC006CFE27 /* MenuViewItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		B11A4ECE2BA08C60006CFE27 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		B11A4ED02BA08ED0006CFE27 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		B11A4ED22BA09039006CFE27 /* PlaceOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderView.swift; sourceTree = "<group>"; };
+		B11A4ED42BA0924B006CFE27 /* OrderViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewItem.swift; sourceTree = "<group>"; };
+		B11A4ED62BA092BC006CFE27 /* MenuViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +109,9 @@
 				B11A4EA22B9F28DF006CFE27 /* Pizza_PlaceApp.swift */,
 				B11A4EA42B9F28DF006CFE27 /* ContentView.swift */,
 				B11A4ECC2BA08C54006CFE27 /* MenuView.swift */,
+				B11A4ED62BA092BC006CFE27 /* MenuViewItem.swift */,
 				B11A4ECE2BA08C60006CFE27 /* OrderView.swift */,
+				B11A4ED42BA0924B006CFE27 /* OrderViewItem.swift */,
 				B11A4ED02BA08ED0006CFE27 /* HeaderView.swift */,
 				B11A4ED22BA09039006CFE27 /* PlaceOrderView.swift */,
 				B11A4EA62B9F28E0006CFE27 /* Assets.xcassets */,
@@ -269,9 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B11A4ED52BA0924B006CFE27 /* OrderViewItem.swift in Sources */,
 				B11A4ED12BA08ED0006CFE27 /* HeaderView.swift in Sources */,
 				B11A4EA52B9F28DF006CFE27 /* ContentView.swift in Sources */,
 				B11A4ECF2BA08C60006CFE27 /* OrderView.swift in Sources */,
+				B11A4ED72BA092BC006CFE27 /* MenuViewItem.swift in Sources */,
 				B11A4ECD2BA08C54006CFE27 /* MenuView.swift in Sources */,
 				B11A4EA32B9F28DF006CFE27 /* Pizza_PlaceApp.swift in Sources */,
 				B11A4ED32BA09039006CFE27 /* PlaceOrderView.swift in Sources */,

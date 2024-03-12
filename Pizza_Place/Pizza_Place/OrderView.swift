@@ -18,11 +18,10 @@ struct OrderView: View {
             }
         )
         
-        HStack(alignment: .firstTextBaseline) {
-            Text("Your order value:")
-            Spacer()
-            Text(9.99, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+        ForEach(1...5, id: \.self) { item in
+            OrderViewItem()
         }
+
     }
 }
 
