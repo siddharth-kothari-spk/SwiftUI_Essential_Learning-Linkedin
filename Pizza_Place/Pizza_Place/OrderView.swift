@@ -20,6 +20,8 @@ struct OrderView: View {
         
         ForEach(1...5, id: \.self) { order in
             OrderViewItem(order: order)
+                .padding(.bottom, 5)
+                .padding([.leading, .trailing], 8)
         }
 
     }
