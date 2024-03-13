@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-   
+    var showOrders: Bool = false
     var body: some View {
         VStack {
             HeaderView()
             PlaceOrderView()
-            OrderView()
-            MenuView()
+            if showOrders {
+                OrderView()
+            }
+            else {
+                MenuView()
+            }
             Spacer()
         }
         .padding()
