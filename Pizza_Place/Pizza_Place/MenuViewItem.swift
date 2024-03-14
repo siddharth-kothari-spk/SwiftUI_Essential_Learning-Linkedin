@@ -14,6 +14,9 @@ struct MenuViewItem: View {
             Image(systemName: "\(item).circle.fill")
             if let image = UIImage(named: "\(item)_sm") {
                 Image(uiImage: image)
+                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    .padding(.trailing, -20)
+                    .padding(.leading, -20)
             }
             else {
                 Image("surfboard_lg")
@@ -27,7 +30,9 @@ struct MenuViewItem: View {
                 Text("Less spicy, extra mushroom")
                     .font(.footnote)
                     .foregroundStyle(.gray)
+                
                 RatingsView(rating: (1...6).randomElement()!)
+                    .padding(5)
             }
         }
     }
