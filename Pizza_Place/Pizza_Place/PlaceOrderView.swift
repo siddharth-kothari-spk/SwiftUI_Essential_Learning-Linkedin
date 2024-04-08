@@ -15,7 +15,7 @@ struct PlaceOrderView: View {
             Text("Order a Pizza!!!!!")
                 .font(.title)
                 .fontWeight(.heavy)
-                .foregroundStyle(.red)
+                .foregroundStyle(Color(red: 0.78, green: 0.17, blue: 0.18))
         }
     }
 }
