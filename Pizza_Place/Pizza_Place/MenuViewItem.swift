@@ -24,6 +24,9 @@ struct MenuViewItem: View {
             
             VStack(alignment: .leading) {
                 Text("Margherita")
+                    .padding()
+                    .background(.linearGradient(colors: [Color.blue, Color.blue.opacity(0.1)], startPoint: .leading, endPoint: .trailing))
+                    .clipShape(Capsule())
                 Text("Description Item \(item): ")
                     .font(.subheadline)
                     .fontWeight(.semibold)

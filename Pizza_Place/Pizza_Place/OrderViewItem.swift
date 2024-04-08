@@ -18,13 +18,20 @@ struct OrderViewItem: View {
                  Spacer()
                  Text(9.99, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
              }
+             .padding()
+             .background(Color(.cyan))
              ScrollView {
                  Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer elementum pretium turpis, et egestas nulla ornare vitae. Donec sollicitudin consequat libero sed elementum. Pellentesque quis auctor quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis orci orci, tempor ac fringilla quis, ullamcorper nec ex.")
                      .font(.custom("Georgia", size: 20, relativeTo: .body))
-                     .fontWeight(.semibold)
+                     .fontWeight(.regular)
                  
              }
+             .padding()
+             .background(.linearGradient(colors: [Color.testColor2, Color.red, Color.orange, Color.yellow], startPoint: .topLeading, endPoint: .bottomTrailing))
          }
+         .padding()
+         .background(Color(.testColor1))
+         
         
     }
 }
